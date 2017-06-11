@@ -55,8 +55,8 @@ sudo dpkg -i python3-lilv_0.22.1.git20160613_armhf.deb
 
 echo ${C}' > PedalPi and components'${NC}
 echo ${C}' >  - WebService <https://github.com/PedalPi/WebService>'${NC}
-pip install PedalPi-WebService
+pip3 install PedalPi-WebService
 echo ${C}' >  - Raspberry P0 <https://github.com/PedalPi/Raspberry-P0>'${NC}
-pip install PedalPi-Raspberry-P0
+pip3 install PedalPi-Raspberry-P0
 
 cd ..
