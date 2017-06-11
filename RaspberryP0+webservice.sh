@@ -70,7 +70,7 @@ from application.application import Application
 from webservice.webservice import WebService
 from raspberry_p0.raspberry_p0 import RaspberryP0
 
-application = Application(path_data="data/", address='localhost')
+application = Application(path_data="data/", address="localhost")
 
 application.register(WebService(application, port=3000))
 application.register(RaspberryP0(application))
