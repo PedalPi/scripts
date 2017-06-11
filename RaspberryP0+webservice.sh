@@ -48,15 +48,16 @@ sudo apt-get install libavahi-compat-libdnssd1
 pip3 install git+https://github.com/depl0y/pybonjour-python3
 
 echo ${C}' >    - lilvlib <https://github.com/PedalPi/lilvlib>'${NC}
-#sudo apt-get install libffi-dev -y --no-install-recommends
+sudo apt-get install libffi-dev -y --no-install-recommends
 wget https://github.com/PedalPi/lilvlib/releases/download/v1.0.0/python3-lilv_0.22.1.git20160613_armhf.deb
 sudo dpkg -i python3-lilv_0.22.1.git20160613_armhf.deb
 
 
 echo ${C}' > PedalPi and components'${NC}
+sudo apt-get install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev
 echo ${C}' >  - WebService <https://github.com/PedalPi/WebService>'${NC}
-pip3 install PedalPi-WebService
+pip3 install PedalPi-WebService --user
 echo ${C}' >  - Raspberry P0 <https://github.com/PedalPi/Raspberry-P0>'${NC}
-pip3 install PedalPi-Raspberry-P0
+pip3 install PedalPi-Raspberry-P0 --user
 
 cd ..
