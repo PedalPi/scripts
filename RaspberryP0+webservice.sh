@@ -44,6 +44,7 @@ mkdir pedalpi
 cd pedalpi
 
 echo ${C}' >    - pybonjour-python3 <https://github.com/depl0y/pybonjour-python3>'${NC}
+sudo apt-get install libavahi-compat-libdnssd1
 pip3 install git+https://github.com/depl0y/pybonjour-python3
 
 echo ${C}' >    - lilvlib <https://github.com/PedalPi/lilvlib>'${NC}
