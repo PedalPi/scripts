@@ -60,4 +60,26 @@ pip3 install PedalPi-WebService --user
 echo ${C}' >  - Raspberry P0 <https://github.com/PedalPi/Raspberry-P0>'${NC}
 pip3 install PedalPi-Raspberry-P0 --user
 
+
 cd ..
+
+echo ${C}' > Creating python execute file in ~/Desktop/pedalpi.py'${NC}
+
+echo '
+from application.application import Application
+from webservice.webservice import WebService
+from raspberry_p0.raspberry_p0 import RaspberryP0
+
+application = Application(path_data="data/", address='localhost')
+
+application.register(WebService(application, port=3000))
+application.register(RaspberryP0(application))
+
+application.start()
+
+import tornado
+try:
+    tornado.ioloop.IOLoop.current().start()
+except KeyboardInterrupt:
+    application.stop()
+' > ~/Desktop/pedalpi.py
