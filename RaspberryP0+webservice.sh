@@ -54,7 +54,7 @@ sudo dpkg -i python3-lilv_0.22.1.git20160613_armhf.deb
 
 
 echo ${C}' > PedalPi and components'${NC}
-sudo apt-get install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev
+sudo apt-get install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev -y --no-install-recommends
 echo ${C}' >  - WebService <https://github.com/PedalPi/WebService>'${NC}
 pip3 install PedalPi-WebService --user
 echo ${C}' >  - Raspberry P0 <https://github.com/PedalPi/Raspberry-P0>'${NC}
